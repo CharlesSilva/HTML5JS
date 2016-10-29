@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>bill calculator</title>
+  </head>
+  <body>
+<script type="text/javascript">
+  window.addEventListener("load", function(){
+    var btn = document.getElementById("btn");
+    btn.addEventListener("click",function(){
+      var numPersonas = parseInt(document.getElementById("numPersonas").value,10);
+      var total = parseInt(document.getElementById("total").value,10);
+      var propina = parseInt(total*0.10,10);
+      var res = (numPersonas != 0)?((total+propina)/numPersonas):"ingresa un numero de personas";
+      var pRes = document.getElementById("pRes");
+      pRes.innerHTML = res;
+    },false);
+  }, "false")
+</script>
+
+    <h1>Calculadora de cuenta con propina</h1>
+    <input type="number" id="total" name="name" value="" placeholder="total de la cuenta">
+    <input type="number" id="numPersonas" name="name" value="" placeholder="numero de personas">
+    <button type="button" name="button" id="btn" >calcular</button>
+    <p id="pRes">
+
+    </p>
+  </body>
+</html>

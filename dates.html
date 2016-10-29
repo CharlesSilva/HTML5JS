@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dates</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function diasParaCumple(){
+        var dia = parseInt(document.getElementById("diaIn").value);
+        var mes = parseInt(document.getElementById("mesIn").value);
+        var anio = parseInt(document.getElementById("anioIn").value);
+        var spanRes = document.getElementById("miliSecSpan");
+
+        var fechaActual = new Date();
+
+        var fechaProxCumple = new Date((anio++) + "-" + mes + "-" + dia);
+        var diferenciaFechas = fechaProxCumple - fechaActual;
+        spanRes.innerHTML = spanRes + "";
+    }
+
+    </script>
+
+    <h1>cuantos milisegundos para mi cumpleaños? </h1>
+    <h5>ingresa tu fecha de nacimiento</h5>
+    <input type="number" id="diaIn" value="" placeholder="dia">
+    <input type="number" id="mesIn" value="" placeholder="mes">
+    <input type="number" id="anioIn" value="" placeholder="anio">
+    <button type="button" id="btn" onclick="diasParaCumple()">Calcular</button>
+
+    <p>
+      >>faltan <span id="miliSecSpan"></span> horas para tu cumpleaños :D
+    </p>
+
+  </body>
+</html>
