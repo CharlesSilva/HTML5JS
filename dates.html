@@ -17,8 +17,8 @@
         var fechaActual = new Date();
 
         var fechaProxCumple = new Date((anio++) + "-" + mes + "-" + dia);
-        var diferenciaFechas = fechaProxCumple - fechaActual;
-        spanRes.innerHTML = spanRes + "";
+        var diferenciaFechas = (fechaProxCumple - fechaActual)/(86400000/24);
+        spanRes.innerHTML = diferenciaFechas + "";
     }
 
     </script>
